@@ -1,3 +1,7 @@
+:root {
+  --primary-color: #ffbf00;
+}
+
 html,
 body {
   padding: 0;
@@ -74,8 +78,8 @@ main {
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .card h2 {
