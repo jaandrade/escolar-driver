@@ -9,13 +9,7 @@
   <link href="auth.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  <header class="header">
-    <h1>Escolar Driver</h1>
-    <div class="header-controls">
-      <button class="theme-toggle" id="theme-toggle">🌞</button>
-      <img src="../attached_assets/LogoVan.png" alt="Logo" class="header-logo">
-    </div>
-  </header>
+  <iframe src="/components/header.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]); this.remove()"></iframe>
   <div class="auth-container">
     <div class="auth-card">
       <h2>Cadastro</h2>

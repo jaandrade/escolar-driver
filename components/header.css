@@ -1,0 +1,27 @@
+
+.header {
+  background-color: var(--header-background);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  gap: 1rem;
+}
+
+.header-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.header h1 {
+  color: #000000;
+  margin: 0;
+}
+
+.header-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-left: auto;
+}

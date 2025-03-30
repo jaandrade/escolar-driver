@@ -15,14 +15,10 @@
 </head>
 
 <body>
-  <header class="header">
-    <h1>Escolar Driver</h1>
-    <div class="header-controls">
-      <img src="attached_assets/LogoVan.png" alt="Logo" class="header-logo">
-      <button class="theme-toggle" id="theme-toggle">🌞</button>
-      <button class="logout-button" id="logout-button">Sair</button>
-    </div>
-  </header>
+  <iframe src="/components/header.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]); this.remove()"></iframe>
+  <script>
+    document.querySelector('.header-controls').innerHTML += '<button class="logout-button" id="logout-button">Sair</button>';
+  </script>
   <main>
     <h1 class="title">Welcome to HTML on Replit!</h1>
     <p class="description">Get started by editing
