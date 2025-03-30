@@ -4,61 +4,60 @@
   This project will auto-refresh as you edit the HTML, CSS and JS. See README.md for more info (including how to disable auto-refresh and install packages).
 -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Escolar Driver</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Escolar Driver</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
+  <body>
+    <header class="header">
+      <img src="attached_assets/LogoVan.png" alt="Logo" class="header-logo" />
+      <h1>Escolar Driver</h1>
+      <div class="header-controls">
+        <button class="theme-toggle" id="theme-toggle">🌞</button>
+        <button class="logout-button" id="logout-button">Sair</button>
+      </div>
+    </header>
+    <main>
+      <h1 class="title">Bem-vindo ao Escolar Driver!</h1>
+      <p class="description">
+        Gerencie suas rotas escolares de forma simples e eficiente.
+      </p>
 
-<body>
-  <header class="header">
-    <img src="attached_assets/LogoVan.png" alt="Logo" class="header-logo">
-    <h1>Escolar Driver</h1>
-    <div class="header-controls">
-      <button class="theme-toggle" id="theme-toggle">🌞</button>
-      <button class="logout-button" id="logout-button">Sair</button>
-    </div>
-  </header>
-  <main>
-    <h1 class="title">Bem-vindo ao Escolar Driver!</h1>
-    <p class="description">Gerencie suas rotas escolares de forma simples e eficiente.</p>
+      <section class="grid">
+        <a href="#" class="card">
+          <h2>Rotas &rarr;</h2>
+          <p>Gerencie suas rotas escolares diárias.</p>
+        </a>
 
-    <section class="grid">
-      <a href="#" class='card'>
-        <h2>Rotas &rarr;</h2>
-        <p>Gerencie suas rotas escolares diárias.</p>
-      </a>
+        <a href="#" class="card">
+          <h2>Alunos &rarr;</h2>
+          <p>Cadastre e gerencie seus alunos.</p>
+        </a>
+      </section>
 
-      <a href="#" class='card'>
-        <h2>Alunos &rarr;</h2>
-        <p>
-          Cadastre e gerencie seus alunos.
-        </p>
-      </a>
-    </section>
-    
-    <div class="card company-card" id="companyCard">
-      <h2>TransLegal</h2>
-      <p>Rua Marasca, 12 Itaim Paulista</p>
-    </div>
+      <div class="card company-card" id="companyCard">
+        <h2>TransLegal</h2>
+        <p>Rua Marasca, 12 Itaim Paulista</p>
+      </div>
 
-    <div id="mapModal" class="map-modal">
-      <div id="map" class="map-container"></div>
-    </div>
-  </main>
+      <div id="mapModal" class="map-modal">
+        <div id="map" class="map-container"></div>
+      </div>
+    </main>
 
-  <script type="module" src="script.js"></script>
-  <script>
-    const MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY || 'AIzaSyCzR96PouwG1AMRKaLyuUWRhSxzn-0JP74';
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${MAPS_API_KEY}`;
-    document.body.appendChild(script);
-  </script>
-
-</body>
-
+    <script type="module" src="script.js"></script>
+    <script>
+      const MAPS_API_KEY =
+        process.env.GOOGLE_MAPS_API_KEY ||
+        "AIzaSyCzR96PouwG1AMRKaLyuUWRhSxzn-0JP74";
+      const script = document.createElement("script");
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${MAPS_API_KEY}`;
+      document.body.appendChild(script);
+    </script>
+  </body>
 </html>
