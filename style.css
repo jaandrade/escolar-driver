@@ -36,13 +36,15 @@ body {
   color: #ffbf00;
   padding: 0.5rem 1rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 60px;
 }
 
 .header h1 {
   color: #000000;
+  margin: 0;
+  text-align: left;
+  flex: 1;
 }
 
 .header-logo {
