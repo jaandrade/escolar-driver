@@ -210,12 +210,16 @@ main {
   z-index: 1000;
 }
 
-.map-container {
-  width: 80%;
-  height: 80%;
-  margin: 5% auto;
-  background: white;
-  border-radius: 10px;
+.map-page {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.map-full {
+  width: 100%;
+  text-align: center;
 }
 
 @media (max-width: 600px) {
