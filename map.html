@@ -6,6 +6,15 @@
   <meta name="viewport" content="width=device-width">
   <title>TransLegal - Localização</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -17,9 +26,27 @@
   </header>
   <main>
     <div class="map-page">
-      <div id="map" class="map-full"></div>
+      <div id="map"></div>
     </div>
   </main>
-  <script type="module" src="map.js"></script>
+  <script>
+    const MAPS_API_KEY = "AIzaSyCzR96PouwG1AMRKaLyuUWRhSxzn-0JP74";
+    
+    function initMap() {
+      const location = { lat: -23.4837, lng: -46.3916 };
+      
+      const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 16,
+        center: location
+      });
+
+      const marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        title: 'TransLegal - Rua Marasca, 12 Itaim Paulista'
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzR96PouwG1AMRKaLyuUWRhSxzn-0JP74&callback=initMap" async defer></script>
 </body>
 </html>
