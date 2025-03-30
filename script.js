@@ -74,22 +74,13 @@ if (companyCard && mapModal) {
 }
 
 function initMap() {
-  const companyLocation = { lat: -23.4837, lng: -46.3916 }; // Rua Marasca, 12 Itaim Paulista
+  const latitude = -23.4837;
+  const longitude = -46.3916;
+  const zoom = 16;
+  const size = "600x400";
   
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: companyLocation,
-    zoom: 16
-  });
-
-  const marker = new google.maps.Marker({
-    position: companyLocation,
-    map: map,
-    icon: {
-      path: google.maps.SymbolPath.CIRCLE,
-      fillColor: '#0066FF',
-      fillOpacity: 1,
-      strokeColor: '#0066FF',
-      scale: 8
-    }
-  });
+  const staticMapUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${latitude},${longitude}&zoom=${zoom}&size=${size}&markers=color:blue%7C${latitude},${longitude}&key=${MAPS_API_KEY}`;
+  
+  const mapContainer = document.getElementById('map');
+  mapContainer.innerHTML = `<img src="${staticMapUrl}" alt="Mapa TransLegal" style="width:100%;height:100%;border-radius:10px;">`;
 }
