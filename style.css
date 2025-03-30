@@ -31,6 +31,26 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+.header {
+  background-color: var(--header-background);
+  color: #ffbf00;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.header h1 {
+  color: #ffbf00;
+}
+
+.header-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
 .theme-toggle {
   background: rgba(255, 255, 255, 0.15);
   border: 2px solid rgba(255, 255, 255, 0.3);
