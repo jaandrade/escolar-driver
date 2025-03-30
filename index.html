@@ -52,7 +52,12 @@
   </main>
 
   <script type="module" src="script.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+  <script>
+    const MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY || 'AIzaSyCzR96PouwG1AMRKaLyuUWRhSxzn-0JP74';
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${MAPS_API_KEY}`;
+    document.body.appendChild(script);
+  </script>
 
 </body>
 
