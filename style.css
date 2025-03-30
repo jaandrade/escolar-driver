@@ -33,12 +33,22 @@ body {
 
 .header {
   background-color: var(--header-background);
-  color: var(--header-text);
+  color: #ffbf00;
   padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 48px;
+  height: 60px;
+}
+
+.header h1 {
+  color: #ffbf00;
+}
+
+.header-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
 
 .theme-toggle {
