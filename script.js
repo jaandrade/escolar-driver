@@ -74,11 +74,11 @@ if (companyCard && mapModal) {
 }
 
 function initMap() {
-  const companyLocation = { lat: -23.5505, lng: -46.4346 }; // Approximate coordinates for Itaim Paulista
+  const companyLocation = { lat: -23.4837, lng: -46.3916 }; // Rua Marasca, 12 Itaim Paulista
   
   map = new google.maps.Map(document.getElementById('map'), {
     center: companyLocation,
-    zoom: 15
+    zoom: 16
   });
 
   const marker = new google.maps.Marker({
