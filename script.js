@@ -20,24 +20,17 @@ const themeToggle = document.getElementById('theme-toggle');
 const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
 function setInitialTheme() {
-  if (prefersDarkScheme.matches) {
-    document.body.setAttribute('data-theme', 'dark');
-    themeToggle.textContent = '🌜';
-  } else {
-    document.body.setAttribute('data-theme', 'light');
-    themeToggle.textContent = '🌞';
-  }
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  document.body.setAttribute('data-theme', savedTheme);
+  themeToggle.textContent = savedTheme === 'dark' ? '🌜' : '🌞';
 }
 
 function toggleTheme() {
   const currentTheme = document.body.getAttribute('data-theme');
-  if (currentTheme === 'dark') {
-    document.body.setAttribute('data-theme', 'light');
-    themeToggle.textContent = '🌞';
-  } else {
-    document.body.setAttribute('data-theme', 'dark');
-    themeToggle.textContent = '🌜';
-  }
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  document.body.setAttribute('data-theme', newTheme);
+  themeToggle.textContent = newTheme === 'dark' ? '🌜' : '🌞';
+  localStorage.setItem('theme', newTheme);
 }
 
 // Check authentication state
