@@ -56,3 +56,40 @@ if (logoutButton) {
     }
   });
 }
+
+// Map functionality
+const companyCard = document.getElementById('companyCard');
+const mapModal = document.getElementById('mapModal');
+let map;
+
+if (companyCard && mapModal) {
+  companyCard.addEventListener('click', () => {
+    mapModal.style.display = 'block';
+    initMap();
+  });
+
+  mapModal.addEventListener('click', () => {
+    mapModal.style.display = 'none';
+  });
+}
+
+function initMap() {
+  const companyLocation = { lat: -23.5505, lng: -46.4346 }; // Approximate coordinates for Itaim Paulista
+  
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: companyLocation,
+    zoom: 15
+  });
+
+  const marker = new google.maps.Marker({
+    position: companyLocation,
+    map: map,
+    icon: {
+      path: google.maps.SymbolPath.CIRCLE,
+      fillColor: '#0066FF',
+      fillOpacity: 1,
+      strokeColor: '#0066FF',
+      scale: 8
+    }
+  });
+}
